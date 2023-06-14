@@ -5,7 +5,6 @@ import AddIcon from '@mui/icons-material/Add'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 
-import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
 import DialogActions from '@mui/material/DialogActions'
 import DialogContent from '@mui/material/DialogContent'
@@ -66,7 +65,7 @@ const AlertDialogSlide = (props: {
         <DialogContentText id="alert-dialog-slide-description">{`${operation} ${dbTable}`}</DialogContentText>
         <DialogContent>{children}</DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
+          <button onClick={handleClose}>Cancel</button>
           {/* <Button type="submit">Add Act</Button> */}
         </DialogActions>
       </Dialog>
