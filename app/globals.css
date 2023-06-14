@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 29, 29, 29;
+  --background-end-rgb: 100, 100, 100;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 29, 29, 29;
+    --background-end-rgb: 100, 100, 100;
   }
 }
 
@@ -24,4 +24,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  min-height: 100vh;
 }
+
+button {
+  background-color: unset;
+}
+
+.card {
+  cursor: grab;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+/* // background-color: rgba(255,195,0,var(--tw-bg-opacity));
+// background-color: rgba(23,23,23,var(--tw-bg-opacity));
+// 150 x 44 pill buttons outlined */

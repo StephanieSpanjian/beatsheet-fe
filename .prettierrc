@@ -1,0 +1,9 @@
+{
+  "htmlWhitespaceSensitivity": "strict",
+  "printWidth": 80,
+  "semi": false,
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "tabWidth": 2,
+  "trailingComma": "es5"
+}
