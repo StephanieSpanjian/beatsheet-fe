@@ -1,5 +1,4 @@
-import DeleteIcon from '@mui/icons-material/Delete'
-import Fab from '@mui/material/Fab'
+import DeleteIcon from '@/components/icons/Trash'
 import deleteAct from '../serverActions/deleteAct'
 import { Beat } from '../../types/beat'
 
@@ -10,13 +9,12 @@ const DeleteActButton = (props: { actId: string; beats: Beat[] }) => {
   }
 
   return (
-    <Fab
-      color="error"
-      aria-label="add"
+    <button
+      aria-label="delete-act-button"
       onClick={handleClick}
     >
       <DeleteIcon />
-    </Fab>
+    </button>
   )
 }
 

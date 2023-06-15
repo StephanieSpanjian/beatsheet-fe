@@ -3,31 +3,42 @@ import { Skeleton } from '@mui/material'
 import Stack from '@mui/material/Stack'
 
 const Loading = () => {
-  return (
-    <Stack spacing={1}>
-      {/* For variant="text", adjust the height via font-size */}
+  const skeletonDashboard = (
+    <Skeleton
+      animation="pulse"
+      variant="text"
+      sx={{ fontSize: '1rem', width: '100%' }}
+      className="bg-neutral-800/70 border-2 border-amber-200  hover:border-amber-500 rounded-md my-3 p-2 relative"
+    >
+      <Skeleton
+        animation="pulse"
+        variant="rectangular"
+        width={2100}
+        height={60}
+      />
       <Skeleton
         animation="pulse"
         variant="text"
         sx={{ fontSize: '1rem' }}
       />
+      <Skeleton className="p-2">
+        <Skeleton
+          animation="pulse"
+          variant="text"
+          sx={{ fontSize: '1rem' }}
+        />
+      </Skeleton>
+    </Skeleton>
+  )
 
-      {/* For other variants, adjust the size with `width` and `height` */}
-      <Skeleton
-        variant="circular"
-        width={40}
-        height={40}
-      />
-      <Skeleton
-        variant="rectangular"
-        width={210}
-        height={60}
-      />
-      <Skeleton
-        variant="rounded"
-        width={210}
-        height={60}
-      />
+  return (
+    <Stack spacing={0}>
+      {skeletonDashboard}
+      {skeletonDashboard}
+      {skeletonDashboard}
+      {skeletonDashboard}
+      {skeletonDashboard}
+      {skeletonDashboard}
     </Stack>
   )
 }

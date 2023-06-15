@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  colors: {
-    // yellow: 'rgba(255,195,0,var(--tw-bg-opacity))', on spotter.la gatsby site
-  },
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

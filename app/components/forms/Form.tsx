@@ -1,7 +1,7 @@
 'use client'
 // import { useContext } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import SnackbarAlert from '../SnackbarAlert'
+// import SnackbarAlert from '../SnackbarAlert'
 import TextField from '@mui/material/TextField'
 
 import { DbTable, Operation } from '../enums/db'
@@ -85,6 +85,7 @@ const Form = (
           rules={{ required: true }}
           render={({ field }) => (
             <TextField
+              className="text-white"
               autoFocus
               fullWidth
               label="Act Name"
@@ -109,6 +110,7 @@ const Form = (
             render={({ field }) => (
               <TextField
                 autoFocus
+                className="text-white"
                 fullWidth
                 label="Beat Name"
                 margin="dense"
@@ -184,11 +186,12 @@ const Form = (
           />
         </>
       )}
-      {/* <SnackbarAlert /> */}
       <button
-        className="rounded-full"
+        className="my-4"
         type="submit"
-      >{`${operation} ${dbTable}`}</button>
+      >
+        Submit
+      </button>
     </form>
   )
 }

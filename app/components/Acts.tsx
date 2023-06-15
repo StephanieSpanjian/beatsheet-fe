@@ -1,6 +1,4 @@
 'use client'
-import { Suspense } from 'react'
-
 import { Act } from '../types/act'
 import Beats from './Beats'
 import CreateActButton from '@/components/CTAs/CreateActButton'
@@ -8,24 +6,31 @@ import CreateActButton from '@/components/CTAs/CreateActButton'
 const Acts = (props: { acts: Act[] }) => {
   const { acts } = props
 
-  return (
-    <div className="md:container md:mx-auto">
-      <CreateActButton />
-      <div className="flex flex-col">
-        {acts.map((act) => {
-          return (
-            // <div key={act?.id}>
-            <Beats
-              key={act?.id}
-              actId={act?.id}
-            />
-            // <div className="hover:rotate-30">{act.name}</div>
-            // </div>
-          )
-        })}
-      </div>
-    </div>
-  )
+  return acts.map((act) => {
+    return (
+      <article
+        key={act?.id}
+        className="bg-neutral-800/70 border-2 border-amber-200  hover:border-amber-500 rounded-md my-3 p-2 relative"
+      >
+        <h1 className="absolute left-2 text-yellow-500/80 font-semibold">
+          {act.name}
+        </h1>
+
+        <div className="absolute -top-[42px] w-full z-50">
+          <div className="flex justify-center">
+            <div className="md:opacity-70 md:hover:opacity-100">
+              <CreateActButton />
+            </div>
+          </div>
+        </div>
+
+        <Beats
+          actId={act?.id}
+          key={act.id}
+        />
+      </article>
+    )
+  })
 }
 
 export default Acts

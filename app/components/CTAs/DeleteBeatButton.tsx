@@ -1,5 +1,4 @@
-import DeleteIcon from '@mui/icons-material/Delete'
-import Fab from '@mui/material/Fab'
+import DeleteIcon from '@/components/icons/XCircle'
 import deleteBeat from '../serverActions/deleteBeat'
 import { Beat } from '../../types/beat'
 
@@ -11,13 +10,12 @@ const DeleteBeatButton = (props: { actId: string; beat: Beat }) => {
   }
 
   return (
-    <Fab
-      color="warning"
-      aria-label="delete"
+    <button
+      aria-label="delete-beat-icon"
       onClick={handleClick}
     >
       <DeleteIcon />
-    </Fab>
+    </button>
   )
 }
 

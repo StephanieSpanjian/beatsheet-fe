@@ -1,19 +1,24 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 29, 29, 29;
+  --background-start-rgb: 40, 40, 40;
   --background-end-rgb: 100, 100, 100;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 29, 29, 29;
-    --background-end-rgb: 100, 100, 100;
-  }
 }
 
 body {
@@ -28,17 +33,43 @@ body {
 }
 
 button {
-  background-color: unset;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  text-transform: uppercase;
 }
-
-.card {
-  cursor: grab;
+button:hover {
+  transform: scale(1.25);
+  transform: translateY(-1);
 }
 
 .card:active {
   cursor: grabbing;
 }
 
-/* // background-color: rgba(255,195,0,var(--tw-bg-opacity));
-// background-color: rgba(23,23,23,var(--tw-bg-opacity));
-// 150 x 44 pill buttons outlined */
+.card {
+  cursor: grab;
+  color: white;
+  min-width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+}
+
+/* Admittedly ugly... */
+.MuiDialog-paper,
+.MuiInputLabel-root {
+  background-color: rgb(var(--background-end-rgb));
+  color: var(--foreground-rgb);
+  text-transform: uppercase;
+}
+
+/* <div class="pointer-events-auto absolute top-1/2 right-0 -mt-6 p-2 hidden md:block cursor-ew-resize" draggable="false" style="touch-action: pan-y; transform-origin: 50% 50%;"><div class="w-1.5 h-8 bg-slate-500/60 rounded-full"></div></div> */
+
+/* SPOTTER YELLOW */
+/* yellow: 'rgba(255,195,0,var(--tw-bg-opacity))', on spotter.la gatsby site; */
+/* HEX: ffc300 */
+/* // background-color: rgba(255,195,0,var(--tw-bg-opacity)); */
+
+/* // <button className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."> */

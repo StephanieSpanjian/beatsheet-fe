@@ -1,5 +1,6 @@
 'use client'
 
 export default function Home() {
-  return <div className="container mx-auto">hello</div>
+  // Some kind of landing page... with links to the studio and lab
+  return <div className="container mx-auto"> </div>
 }

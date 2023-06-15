@@ -18,8 +18,8 @@ const spotterFont = localFont({
 })
 
 export const metadata = {
-  title: 'Welcome to Spotter.la Studio!',
-  description: 'Where all your creator needs are met',
+  title: 'Welcome to Spotter.la Lab & Studio!',
+  description: 'Where all your creator live',
 }
 
 export default function RootLayout({

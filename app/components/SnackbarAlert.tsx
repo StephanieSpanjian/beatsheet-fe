@@ -1,6 +1,5 @@
 import { forwardRef, useState } from 'react'
 import Stack from '@mui/material/Stack'
-import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 
@@ -41,12 +40,12 @@ export default function CustomizedSnackbars() {
       spacing={2}
       sx={{ width: '100%' }}
     >
-      <Button
-        variant="outlined"
+      <button
+        // variant="outlined"
         onClick={handleClick}
       >
         Open success snackbar
-      </Button>
+      </button>
       <Snackbar
         open={open}
         autoHideDuration={6000}
