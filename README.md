@@ -1,6 +1,6 @@
-## Code Test for Spotter.LA
+# Code Test for Spotter.LA
 
-# Thought Process
+## Thought Process
 
 Doing my best to hold myself to the highest standard I can, I did my best with the time given. Did best to balance time between design and functionality in the time given.
 
