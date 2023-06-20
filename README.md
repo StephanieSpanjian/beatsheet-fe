@@ -8,6 +8,13 @@ Doing my best to hold myself to the highest standard I can, I did my best with t
 
 https://github.com/fmatar/beatsheet-exercise
 
+```bash
+yarn
+yarn dev
+```
+
+Use browser to navigate to http://localhost:3000/dashboard
+
 ## See Below for the Template Used to Initialize
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
